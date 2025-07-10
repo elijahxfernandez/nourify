@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF3E0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- AppBar / Toolbar with Logo -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#FF0000"
+            android:layout_width="match_parent"
+            android:layout_height="62.5dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:src="@drawable/white_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Logo" />
+        </LinearLayout>
+
+        <!-- Instructional Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Life Matrix Measurement\n\nTap on any area to measure your satisfaction level"
+            android:textColor="#C62828"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+        <!-- Placeholder for custom component (LmmWidget) -->
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF3E0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Self Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Self"
+                    android:textColor="#FF5722"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:rowCount="1"
+                    android:layout_marginTop="8dp">
+
+                    <!-- Repeat for each tile -->
+                    <include layout="@layout/life_tile" android:id="@+id/self1" />
+                    <include layout="@layout/life_tile" android:id="@+id/self2" />
+                    <include layout="@layout/life_tile" android:id="@+id/self3" />
+                    <include layout="@layout/life_tile" android:id="@+id/self4" />
+                </GridLayout>
+
+                <!-- Health Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:textColor="#FF5722"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:rowCount="1"
+                    android:layout_marginTop="8dp">
+
+                    <include layout="@layout/life_tile" android:id="@+id/health1" />
+                    <include layout="@layout/life_tile" android:id="@+id/health2" />
+                    <include layout="@layout/life_tile" android:id="@+id/health3" />
+                    <include layout="@layout/life_tile" android:id="@+id/health4" />
+                </GridLayout>
+
+                <!-- Work and Connection: same structure repeated -->
+                <!-- Work Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Work"
+                    android:textColor="#4CAF50"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:rowCount="1"
+                    android:layout_marginTop="8dp">
+
+                    <include layout="@layout/life_tile" android:id="@+id/work1" />
+                    <include layout="@layout/life_tile" android:id="@+id/work2" />
+                    <include layout="@layout/life_tile" android:id="@+id/work3" />
+                    <include layout="@layout/life_tile" android:id="@+id/work4" />
+                </GridLayout>
+
+                <!-- Connection Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection"
+                    android:textColor="#FF7043"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:rowCount="1"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="32dp">
+
+                    <include layout="@layout/life_tile" android:id="@+id/conn1" />
+                    <include layout="@layout/life_tile" android:id="@+id/conn2" />
+                    <include layout="@layout/life_tile" android:id="@+id/conn3" />
+                    <include layout="@layout/life_tile" android:id="@+id/conn4" />
+                </GridLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!-- "I'm Ready" Button -->
+        <Button
+            android:id="@+id/btn_ready"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="I'm ready"
+            android:textColor="#FFF3E0"
+            android:textStyle="bold"
+            android:backgroundTint="#FF0000"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Decorative Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="#FFEBEE"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="#FFEBEE"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTintMode="src_in"
+            android:background="@drawable/card_bg"/>
+
+    </LinearLayout>
+</ScrollView>
